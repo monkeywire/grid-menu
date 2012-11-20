@@ -1,0 +1,104 @@
+<html>
+<head>
+
+	<style type="text/css">
+		.button {
+		    height:150px;
+		    -webkit-border-radius: 20px;
+		    -moz-border-radius: 20px;
+		    border-radius: 20px;
+		    background-color:#E3A20B;
+		    line-height:112px;
+		}
+
+		.btn_text {
+			font-family: “Lucida Sans Unicode”, sans-serif;
+			font-size: 33px;
+			font-style: normal;
+			font-weight: normal;
+			text-transform: normal;
+			letter-spacing: -3px;
+			line-height: 1.2em;
+		}
+
+	</style>
+
+</head>
+<body>
+
+	<center><h1>Resize Me!</h></center>
+
+	<!-- this is the grid_menu container, it will contain all of the menus.
+        Note the class="grid_menu" attribute. -->
+    <div id="grid_menu">
+        <!-- this is a menu container, and will contain buttons for the menu.
+            Note the class="menu" attribute-->
+        <div id="home" class="menu">
+            <div id="users" class="button">
+            	<center class="btn_text">Users</center>
+            </div>
+            <div id="settings" class="button">
+            	<center class="btn_text">Settings</center>
+            </div>
+            <div id="start" class="button">
+            	<center class="btn_text">Start Game</center>
+            </div>
+        </div>
+
+        <div id="users" class="menu">
+            <div id="new" class="button" onclick="alert('clicked new');">
+            	<center class="btn_text">New User</center>
+            </div>
+            <div id="login" class="button" onclick="alert('clicked login');">
+            	<center class="btn_text">Login</center>
+            </div>
+            <div id="delete" class="button" onclick="alert('clicked delete');">
+            	<center class="btn_text">Delete User</center>
+            </div>
+            <div id="home" class="button">
+            	<center class="btn_text">Home</center>
+            </div>
+        </div>
+
+        <div id="settings" class="menu">
+            <div id="video" class="button" onclick="alert('clicked video');">
+            	<center class="btn_text">Video</center>
+            </div>
+            <div id="audio" class="button" onclick="alert('clicked audio');">
+            	<center class="btn_text">Audio</center>
+            </div>
+            <!-- id of the button should be the same id of the menu you want the
+                button to create next.  If the onclick event is set then id
+                can be whatever you want.-->
+            <div id="home" class="button">
+            	<center class="btn_text">Home</center>
+            </div>
+            <!-- so when the above 'div' tag is clicked, the menu 'home' will be
+                displayed.-->
+        </div>
+
+        <div id="start" class="menu">
+            <div id="new" class="button" onclick="alert('clicked new');">
+            	<center class="btn_text">New</center>
+            </div>
+            <div id="load" class="button" onclick="alert('clicked load');">
+            	<center class="btn_text">Load</center>
+            </div>
+            <div id="save" class="button" onclick="alert('clicked save');">
+            	<center class="btn_text">Save</center>
+            </div>
+            <div id="home" class="button">
+            	<center class="btn_text">Home</center>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="js/vendor/jquery-1.8.2.js"></script>
+    <script type="text/javascript" src="js/vendor/jquery.grid-a-licious.js"></script>
+    <script type="text/javascript" src="js/grid-menu.js"></script>
+
+    <script type="text/javascript">
+ 		$('#grid_menu').gridMenu();
+    </script>
+</body>
+</html>
